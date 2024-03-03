@@ -209,7 +209,7 @@ i {
   margin: 0.25rem 0;
 }
 
-#sidebar nav a {
+a {
   display: flex;
   align-items: center;
   justify-content: space-between;

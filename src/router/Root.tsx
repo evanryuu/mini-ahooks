@@ -27,7 +27,13 @@ export default function Root() {
               value={searchTerms}
               onChange={(e) => setSearchTerms(e.target.value.trim())}
             />
-            <button className="rounded-md h-32px flex items-center justify-center">Github</button>
+            <a
+              href="https://github.com/evanryuu/mini-ahooks"
+              target="_blank"
+              className="rounded-lg bg-white border border-solid border-stone-300 hover:border-blue-300 hover:text-blue-300 transition-colors !underline-unset text-stone-500 py-2 px-4 flex items-center justify-center"
+            >
+              Github
+            </a>
             <div className="sr-only" aria-live="polite"></div>
           </form>
         </div>
