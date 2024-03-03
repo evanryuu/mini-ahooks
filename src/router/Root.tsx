@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { routes } from '.'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
 export default function Root() {
   const [searchTerms, setSearchTerms] = useState('')
   const [filteredRoutes, setFilteredRoutes] = useState(routes[0].children)
+  const location = useLocation()
 
   useEffect(() => {
     setFilteredRoutes(
@@ -33,8 +34,8 @@ export default function Root() {
         <nav>
           <ul>
             {filteredRoutes.map((v) => (
-              <li key={v.path}>
-                <Link to={v.path}>{v.path.split('/')[1]}</Link>
+              <li key={v.path} className={v.path === location.pathname.split('/')[2] ? 'text-blue-500' : ''}>
+                <Link to={v.path}>{v.path}</Link>
               </li>
             ))}
           </ul>

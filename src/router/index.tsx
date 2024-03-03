@@ -5,15 +5,15 @@ import ClickAway from '@/components/ClickAway'
 
 const routes = [
   {
-    path: '/',
+    path: '/mini-ahooks',
     element: <Root />,
     children: [
       {
-        path: '/useVirtualList',
+        path: 'useVirtualList',
         element: <VirtualList />,
       },
       {
-        path: '/useClickAway',
+        path: 'useClickAway',
         element: <ClickAway />,
       },
     ],
