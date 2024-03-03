@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/mini-ahooks/',
   plugins: [react(), UnoCSS()],
   resolve: {
     alias: {
